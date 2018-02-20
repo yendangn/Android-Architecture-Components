@@ -1,0 +1,103 @@
+apply plugin: 'com.android.application'
+
+android {
+    compileSdkVersion 27
+    defaultConfig {
+        applicationId "com.androidframework"
+        minSdkVersion 23
+        targetSdkVersion 26
+        versionCode 1
+        versionName "1.0"
+        testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
+
+        buildConfigField "String", "API_URL", "\"http://api.themoviedb.org/3/\""
+        buildConfigField "String", "API_KEY", '"f1b6821a25510cb05dff8a2fc76c715f"'
+    }
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+
+}
+
+ext {
+    supportLibraryVersion = '27.0.2'
+    firebaseVersion = '11.4.2'
+    multidexVersion = '1.0.2'
+    leakcanaryVersion = '1.5.1'
+    butterknifeVersion = '8.8.1'
+    retrofitVersion = '2.1.0'
+    okhttp3Version = '3.9.0'
+    picassoVersion = '2.5.2'
+    rxjavaMathVersion = '1.0.0'
+    rxjava2Version = '2.x.y'
+    rxandroidVersion = '2.0.1'
+    rxbindingVersion = '1.0.0'
+    rxCupboardVersion = '2.0'
+    circleimageviewVersion = '2.1.0'
+    junitVersion = '4.12'
+    espressoVersion = '2.2.2'
+    exomediaVersion = '3.1.1'
+    rxpermissionsVersion = '0.9.4@aar'
+    timberVersion = '4.5.1'
+    bottomBarVersion = '2.1.1'
+    daggerVersion = '2.11'
+    archVersion = '1.0.0'
+}
+
+dependencies {
+    implementation fileTree(include: ['*.jar'], dir: 'libs')
+
+    //Dagger 2
+    compile "com.google.dagger:dagger:${daggerVersion}"
+    annotationProcessor "com.google.dagger:dagger-compiler:${daggerVersion}"
+    compile "com.google.dagger:dagger-android-support:${daggerVersion}"
+    annotationProcessor 'com.google.dagger:dagger-android-processor:2.11'
+
+    //View model
+    compile 'android.arch.lifecycle:runtime:1.1.0'
+    compile 'android.arch.lifecycle:extensions:1.1.0'
+    annotationProcessor "android.arch.lifecycle:compiler:$archVersion"
+    implementation "android.arch.persistence.room:runtime:$archVersion"
+    annotationProcessor "android.arch.persistence.room:compiler:$archVersion"
+
+    //Butter Knife
+    compile "com.jakewharton:butterknife:${butterknifeVersion}"
+    annotationProcessor "com.jakewharton:butterknife-compiler:${butterknifeVersion}"
+
+    //Network
+    compile "com.squareup.retrofit2:retrofit:${retrofitVersion}"
+    compile "com.squareup.retrofit2:adapter-rxjava:${retrofitVersion}"
+    compile "com.squareup.retrofit2:converter-gson:${retrofitVersion}"
+    compile "com.squareup.okhttp3:okhttp:${okhttp3Version}"
+    compile "com.squareup.okhttp3:okhttp-urlconnection:${okhttp3Version}"
+    compile "com.squareup.okhttp3:logging-interceptor:${okhttp3Version}"
+
+    //Support design
+    compile "com.android.support:multidex:${multidexVersion}"
+    compile "com.android.support:appcompat-v7:${supportLibraryVersion}"
+    compile "com.android.support:design:${supportLibraryVersion}"
+    compile "com.android.support:recyclerview-v7:${supportLibraryVersion}"
+    compile "com.android.support:cardview-v7:${supportLibraryVersion}"
+    compile "com.android.support:support-v4:${supportLibraryVersion}"
+    compile "com.android.support:support-core-utils:${supportLibraryVersion}"
+    compile "com.android.support:percent:${supportLibraryVersion}"
+    compile "com.android.support:support-vector-drawable:${supportLibraryVersion}"
+
+    //Load image
+    compile "com.squareup.picasso:picasso:${picassoVersion}"
+
+    compile 'com.mikhaellopez:circularprogressbar:1.1.1'
+
+
+    implementation 'com.android.support.constraint:constraint-layout:1.0.2'
+    testImplementation 'junit:junit:4.12'
+    androidTestImplementation 'com.android.support.test:runner:1.0.1'
+    androidTestImplementation 'com.android.support.test.espresso:espresso-core:3.0.1'
+}
