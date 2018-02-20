@@ -20,3 +20,8 @@ I'm using [Dagger 2](https://google.github.io/dagger/) library to implementing d
 
 ## Next version
 I will intergrate with local database. You can learn more at : [Saving Data Using the Room Persistence Library](https://developer.android.com/training/data-storage/room/index.html)
+
+### How to run demo app?
+1. First you should go to this page: https://www.themoviedb.org/documentation/api.
+2. Register a account and get your API key.
+3. Then update this API key into gradle file.
