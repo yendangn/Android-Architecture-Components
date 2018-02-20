@@ -25,3 +25,4 @@ I will intergrate with local database. You can learn more at : [Saving Data Usin
 1. First you should go to this page: https://www.themoviedb.org/documentation/api.
 2. Register a account and get your API key.
 3. Then update this API key into gradle file.
+![](https://github.com/yendangn/Android-Architecture-Components/blob/master/image/api_key.png)
