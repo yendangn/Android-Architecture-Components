@@ -1,4 +1,4 @@
-# AndroidMVVM
+# Android Architecture Components
 This repository contains a detailed sample app that implements Android Architecture Components using Dagger2.
 
 ## The architecture
