@@ -1,11 +1,9 @@
 package com.androidframework.feature.movielist;
 
 
-import android.arch.lifecycle.Observer;
-import android.arch.lifecycle.ViewModelProvider;
+import android.app.Fragment;
 import android.arch.lifecycle.ViewModelProviders;
 import android.os.Bundle;
-import android.app.Fragment;
 import android.support.annotation.Nullable;
 import android.support.v4.widget.SwipeRefreshLayout;
 import android.support.v7.widget.GridLayoutManager;
@@ -17,11 +15,8 @@ import android.view.ViewGroup;
 import com.androidframework.R;
 import com.androidframework.core.BaseFragment;
 import com.androidframework.feature.NavigationController;
-import com.androidframework.pojo.Movie;
 import com.androidframework.util.GridSpacingItemDecoration;
 import com.androidframework.util.UiUtil;
-
-import java.util.List;
 
 import javax.inject.Inject;
 

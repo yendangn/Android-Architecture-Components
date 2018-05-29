@@ -24,4 +24,5 @@
     <string name="tv_title_rating">Rating</string>
     <string name="tv_title_popularity">Popularity:</string>
     <string name="tv_title_vote_count">Vote Count:</string>
+    <string name="movie_list_title">Movie List</string>
 </resources>

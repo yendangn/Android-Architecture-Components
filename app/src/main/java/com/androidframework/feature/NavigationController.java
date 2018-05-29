@@ -27,14 +27,16 @@ public class NavigationController {
         MovieListFragment fragment = new MovieListFragment();
         fragmentManager.beginTransaction()
                 .replace(containerId, fragment)
+                .setReorderingAllowed(true)
                 .commitAllowingStateLoss();
     }
 
     public void navigateToMovieDetailFragment(int movieId) {
         MovieDetailFragment fragment = MovieDetailFragment.newInstance(movieId);
         fragmentManager.beginTransaction()
+                .setCustomAnimations(R.anim.enter, R.anim.exit, R.anim.pop_enter, R.anim.pop_exit)
                 .replace(containerId, fragment)
-                .addToBackStack(null)
+                .addToBackStack("MovieDetailFragment")
                 .commitAllowingStateLoss();
     }
 

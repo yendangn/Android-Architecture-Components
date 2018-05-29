@@ -4,6 +4,7 @@ import android.arch.lifecycle.LiveData;
 import android.arch.lifecycle.MutableLiveData;
 
 import com.androidframework.core.APICallback;
+import com.androidframework.db.dao.SearchHistoryDao;
 import com.androidframework.pojo.Movie;
 import com.androidframework.service.MovieService;
 

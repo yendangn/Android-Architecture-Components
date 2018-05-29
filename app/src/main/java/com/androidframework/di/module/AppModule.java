@@ -10,6 +10,7 @@ import dagger.android.AndroidInjectionModule;
 @Module(includes = {AndroidInjectionModule.class,
         ActivityBuilderModule.class,
         ServiceModule.class,
+        DbModule.class,
         ViewModelModule.class})
 public class AppModule {
 }

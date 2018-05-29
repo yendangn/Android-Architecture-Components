@@ -1,7 +1,10 @@
 package com.androidframework.feature.moviedetail;
 
+import android.app.Application;
+import android.arch.lifecycle.AndroidViewModel;
 import android.arch.lifecycle.LiveData;
 import android.arch.lifecycle.ViewModel;
+import android.support.annotation.NonNull;
 
 import com.androidframework.feature.movielist.MovieListRepository;
 import com.androidframework.pojo.Movie;
@@ -18,6 +21,7 @@ public class MovieDetailViewModel extends ViewModel {
 
     private MovieDetailRepository movieDetailRepository;
     private LiveData<Movie> movie;
+
 
     @Inject
     public MovieDetailViewModel(MovieDetailRepository movieDetailRepository) {
